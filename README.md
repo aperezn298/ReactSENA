@@ -3,7 +3,7 @@ Competencia de React SENA para el Programa de ADSO
 
 ---
 
-<img src="https://somospnt.com/images/blog/cover/componentes-react.png" alt="Logo de GitHub" width="400" height="300">
+<img src="https://somospnt.com/images/blog/cover/componentes-react.png" alt="Logo de GitHub" width="350" height="200">
 
 ---
 
