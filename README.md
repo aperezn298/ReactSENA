@@ -1,5 +1,6 @@
 <img src="https://somospnt.com/images/blog/cover/componentes-react.png" alt="Logo de GitHub" width="250" height="100">
 Competencia de React SENA para el Programa de ADSO
+
 ---
 
 # Contenido
