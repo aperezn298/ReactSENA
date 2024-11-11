@@ -1,0 +1,52 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  padding: 20px;
+  width: 400px; /* Ancho fijo para tarjetas */
+  transition: transform 0.2s;
+}
+
+/* Efecto al pasar el mouse sobre la tarjeta */
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo del título del producto */
+.card h3 {
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+}
+
+/* Estilo del precio */
+.card p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Estilo del botón */
+button {
+  background-color: #28a745; /* Verde */
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 10px 15px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+button:hover {
+  background-color: #218838; /* Verde más oscuro */
+}

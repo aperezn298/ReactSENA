@@ -9,4 +9,5 @@ Competencia de React SENA para el Programa de ADSO
 3. [Repaso de Javascript](https://github.com/aperezn298/ReactSENA/tree/main/03_RepasoJavascript)
 4. [Fundamentos React](https://github.com/aperezn298/ReactSENA/tree/main/04_FundamentosReact)
 5. [Componentes](https://github.com/aperezn298/ReactSENA/tree/main/05_Componentes)
-5. [Hooks](https://github.com/aperezn298/ReactSENA/tree/main/06_Hooks)
+6. [Hooks](https://github.com/aperezn298/ReactSENA/tree/main/06_Hooks)
+7. [Estados Globales](https://github.com/aperezn298/ReactSENA/tree/main/07_EstadosGlobales)
