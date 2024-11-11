@@ -1,0 +1,45 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Estilos para la barra de navegación vertical */
+.vertical-nav {
+    width: 200px;
+    height: 100vh;
+    background-color: #132790;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+}
+
+/* Estilos para los enlaces de navegación */
+.nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #7fa6e8;
+    color: #132790;
+    font-weight: bold;
+}
+
+/* Estilo para el contenido de la página */
+.content {
+    margin-left: 220px;
+    padding: 20px;
+    color: #132790;
+}
