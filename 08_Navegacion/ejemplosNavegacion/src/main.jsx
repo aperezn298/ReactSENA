@@ -1,15 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-// import { App } from './pages/App'
+// // Ejemplo Base
+// import { AppEjemplo } from './ejemploBase/EjemploBase'
+
+// // Ejemplo de Paginas - Externas
+// import { AppPrincipal } from './ejemploPages/Principal'
 // import './index.css'
 
-import { App } from './EjemploBase'
+// Ejemplo de Paginas - Internas
+import { AppInternos } from './ejemploInternos/Principal'
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(
     <>
-        <App />
+        {/* <AppEjemplo /> --> Ejemplo Base */}
+        {/* <AppPrincipal /> --> Ejemplo de Paginas */}
+        <AppInternos /> {/* --> Ejemplo de Paginas Internas */}
     </>
 )
