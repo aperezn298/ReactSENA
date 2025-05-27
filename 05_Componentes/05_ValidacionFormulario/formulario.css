@@ -1,0 +1,179 @@
+/* CSS para el formulario con diseño moderno y responsivo */
+
+/* Variables para colores y sombras */
+:root {
+  --color-primary: #3498db;
+  --color-primary-hover: #2980b9;
+  --color-primary-disabled: #95c6eb;
+  --color-error: #e74c3c;
+  --color-success: #2ecc71;
+  --color-text: #333;
+  --color-label: #555;
+  --color-border: #ddd;
+  --color-background: #fff;
+  --color-reset: #f39c12;
+  --color-reset-hover: #d35400;
+  --color-reset-disabled: #f8c471;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --border-radius: 4px;
+  --transition-speed: 0.3s;
+}
+
+/* Estilos del formulario principal */
+.formulario {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--color-background);
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilos para los grupos de formulario */
+.formulario div {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+/* Estilos para las etiquetas */
+.formulario label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-label);
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+/* Estilos para los campos de entrada */
+.formulario input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.formulario input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* Estilos para mensajes de error */
+.formulario .error {
+  display: block;
+  color: var(--color-error);
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  animation: fadeIn 0.3s ease-in;
+  font-weight: 500;
+  text-align: left;
+}
+
+/* Variables adicionales para los botones */
+:root {
+  --color-reset: #f39c12;
+  --color-reset-hover: #d35400;
+  --color-reset-disabled: #f8c471;
+}
+
+/* Estilos generales para botones */
+.formulario button {
+  color: white;
+  border: none;
+  padding: 0.85rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-speed), transform var(--transition-speed);
+  margin-top: 1rem;
+  width: 100%;
+}
+
+/* Estilos específicos para botón de envío (submit) */
+.formulario button[type="submit"] {
+  background-color: var(--color-primary);
+}
+
+.formulario button[type="submit"]:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+}
+
+.formulario button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* Estilos específicos para botón de reset */
+.formulario button[type="reset"] {
+  background-color: var(--color-reset);
+}
+
+.formulario button[type="reset"]:hover {
+  background-color: var(--color-reset-hover);
+  transform: translateY(-2px);
+}
+
+.formulario button[type="reset"]:active {
+  transform: translateY(0);
+}
+
+/* Estilo para botón deshabilitado */
+.formulario button:disabled,
+.formulario button.disabled {
+  background-color: var(--color-primary-disabled);
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Estilo para campos con error */
+.formulario input.error-field {
+  border-color: var(--color-error);
+  background-color: rgba(231, 76, 60, 0.05);
+}
+
+.buttons-form {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  gap: 1rem;
+}
+
+.buttons-form button {
+  flex: 1;
+  width: auto;
+}
+
+/* Quitar el span que se usaba para espaciado */
+.buttons-form span {
+  display: none;
+}
+
+/* Animación para los mensajes de error */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+  .formulario {
+    padding: 1.5rem;
+    margin: 1rem;
+    max-width: none;
+  }
+  
+  .formulario label {
+    font-size: 0.9rem;
+  }
+  
+  .formulario input {
+    padding: 0.7rem;
+  }
+}
