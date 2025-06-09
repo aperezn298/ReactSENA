@@ -20,3 +20,7 @@ Competencia de React SENA para el Programa de ADSO
 8. [Navegación y Rutas](https://github.com/aperezn298/ReactSENA/tree/main/08_Navegacion)
 9. [Consumo de API](https://github.com/aperezn298/ReactSENA/tree/main/09_ConsumoAPI)
 10. [API Node JS](https://github.com/aperezn298/ReactSENA/tree/main/10_API_NodeJS)
+
+
+# Guia Interactiva de Aprendizaje:
+- [React de 0 a Experto](https://ingdanielbs.github.io/guias-software/React/index.html#inicio)
