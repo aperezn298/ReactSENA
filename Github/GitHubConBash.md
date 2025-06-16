@@ -10,6 +10,7 @@ Esta guía te enseñará cómo utilizar GitHub desde los conceptos básicos hast
    - [Crear un nuevo repositorio desde cero](#crear-un-nuevo-repositorio-desde-cero)
 4. [Realizar cambios y subirlos a GitHub](#4-realizar-cambios-y-subirlos-a-github)
 5. [Comandos útiles de Git en Bash](#5-comandos-útiles-de-git-en-bash)
+6. [Solución de problemas comunes en Git](#solución-de-problemas-comunes-en-git)
 
 ## 1. Crear cuenta e iniciar sesión
 
@@ -124,12 +125,65 @@ echo "# Mi Proyecto" > README.md
 git add .
 git commit -m "Commit inicial"
 
+# Verificar el nombre de la rama actual (podría ser main o master)
+git branch
+
 # Conectar a un repositorio remoto en GitHub (que debes crear primero en la web de GitHub)
 git remote add origin https://github.com/tu-usuario/mi-proyecto.git
 
 # Subir los cambios (para repos nuevos es posible que necesites especificar la rama)
 git push -u origin main
 ```
+
+### Problemas comunes al hacer push por primera vez
+
+#### Error: "src refspec main does not match any"
+Este error ocurre comúnmente cuando intentas hacer push a un repositorio pero la rama que estás utilizando no existe o tiene un nombre diferente.
+
+```bash
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/usuario/repositorio.git'
+```
+
+**Soluciones:**
+
+1. **Verifica el nombre de tu rama actual:**
+   ```bash
+   # Verificar en qué rama estás actualmente
+   git branch
+   ```
+
+2. **Si estás en una rama con nombre diferente (por ejemplo, master en lugar de main):**
+   ```bash
+   # Cambia el comando para usar la rama correcta
+   git push -u origin master
+   ```
+
+3. **Si no hay ningún commit aún:**
+   ```bash
+   # No puedes hacer push si no tienes al menos un commit
+   echo "# Mi Proyecto" > README.md
+   git add README.md
+   git commit -m "Primer commit"
+   git push -u origin main
+   ```
+
+4. **Si necesitas cambiar el nombre de tu rama principal de master a main:**
+   ```bash
+   # Renombrar la rama local
+   git branch -m master main
+   # Luego hacer push
+   git push -u origin main
+   ```
+
+5. **Si el repositorio remoto tiene una rama main predeterminada:**
+   ```bash
+   # Traer primero la rama main remota y luego hacer push
+   git fetch origin
+   git checkout main
+   # Hacer cambios y luego push
+   git push -u origin main
+   ```
 
 ### Configurar SSH para una conexión más segura (opcional pero recomendado)
 ```bash
@@ -183,6 +237,18 @@ Luego, ve a GitHub → Settings → SSH and GPG keys → New SSH key → Pega tu
    > Nota: Por defecto, la rama principal suele llamarse `main` o `master`
 
 2. Si es la primera vez que haces push, puede solicitar tus credenciales de GitHub
+
+3. Si recibes un error "src refspec main does not match any":
+   ```bash
+   # Verifica el nombre de tu rama actual
+   git branch
+   
+   # Asegúrate de tener al menos un commit antes de hacer push
+   git status
+   
+   # Si estás en master en lugar de main, usa:
+   git push -u origin master
+   ```
 
 ### En caso de conflictos
 Si otras personas han modificado los mismos archivos, puedes encontrar conflictos. En ese caso:
@@ -269,6 +335,89 @@ git push -u origin feature/nombre-caracteristica
 git checkout main
 git merge feature/nombre-caracteristica
 git push origin main
+```
+
+## Solución de problemas comunes en Git
+
+### Error: "src refspec main does not match any"
+Este error suele aparecer cuando intentas hacer push a un repositorio pero la rama especificada no existe localmente o no hay commits en ella.
+
+**Causas y soluciones:**
+1. **No has hecho ningún commit inicial:**
+   ```bash
+   # Crear un archivo y hacer un commit
+   echo "# Inicio del proyecto" > README.md
+   git add README.md
+   git commit -m "Commit inicial"
+   git push -u origin main
+   ```
+
+2. **Estás usando un nombre de rama incorrecto:**
+   El nombre de la rama predeterminada puede ser `main` o `master` dependiendo de la configuración:
+   ```bash
+   # Verificar el nombre de tu rama actual
+   git branch
+   
+   # Si tu rama se llama master pero intentas hacer push a main
+   git push -u origin master  # usar el nombre correcto
+   ```
+
+3. **Necesitas configurar la rama por defecto:**
+   ```bash
+   # Si inicializaste un repo pero la rama no tiene nombre
+   git branch -M main  # Renombrar/configurar como main
+   git push -u origin main
+   ```
+
+### Error: "fatal: remote origin already exists"
+Este error aparece cuando intentas añadir un remoto con el nombre "origin" pero ya existe.
+
+**Solución:**
+```bash
+# Ver los remotos actuales
+git remote -v
+
+# Eliminar el remoto existente
+git remote remove origin
+
+# Añadir el nuevo remoto
+git remote add origin https://github.com/tu-usuario/tu-repo.git
+```
+
+### Error: "fatal: not a git repository"
+Este error ocurre cuando intentas usar comandos git fuera de un repositorio git.
+
+**Solución:**
+```bash
+# Asegúrate de estar en el directorio correcto
+cd ruta/a/tu/proyecto
+
+# O inicializa un nuevo repositorio
+git init
+```
+
+### Error: "fatal: refusing to merge unrelated histories"
+Este error aparece cuando intentas combinar dos repositorios que no tienen un historial común.
+
+**Solución:**
+```bash
+# Permitir la fusión de historiales no relacionados
+git pull origin main --allow-unrelated-histories
+```
+
+### Error: "Permission denied (publickey)"
+Este error aparece cuando intentas conectarte a GitHub por SSH pero hay problemas con tu clave.
+
+**Solución:**
+```bash
+# Verificar que el agente SSH está ejecutándose
+eval "$(ssh-agent -s)"
+
+# Añadir tu clave al agente
+ssh-add ~/.ssh/id_ed25519
+
+# Verificar la conexión con GitHub
+ssh -T git@github.com
 ```
 
 ## Recursos adicionales
