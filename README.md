@@ -28,6 +28,7 @@ Competencia de React SENA para el Programa de ADSO
 
 # Github:
 - [Paso a Paso](https://github.com/aperezn298/ReactSENA/tree/main/Github/PasoPasoGitHub.md)
+- [GitHub con Bash](https://github.com/aperezn298/ReactSENA/tree/main/Github/GitHubConBash.md)
 
 
 # Guia Interactiva de Aprendizaje:
