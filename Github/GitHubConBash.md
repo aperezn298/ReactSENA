@@ -6,6 +6,8 @@ Esta guía te enseñará cómo utilizar GitHub desde los conceptos básicos hast
 1. [Crear cuenta e iniciar sesión](#1-crear-cuenta-e-iniciar-sesión)
 2. [Configurar Git en tu computadora](#2-configurar-git-en-tu-computadora)
 3. [Clonar un repositorio existente](#3-clonar-un-repositorio-existente)
+   - [Clonar un repositorio vacío](#clonar-un-repositorio-vacío)
+   - [Crear un nuevo repositorio desde cero](#crear-un-nuevo-repositorio-desde-cero)
 4. [Realizar cambios y subirlos a GitHub](#4-realizar-cambios-y-subirlos-a-github)
 5. [Comandos útiles de Git en Bash](#5-comandos-útiles-de-git-en-bash)
 
@@ -85,6 +87,49 @@ git config --list
    ```bash
    git clone URL_del_repositorio
    ```
+
+### Clonar un repositorio vacío
+Sí, puedes clonar un repositorio vacío. Si el repositorio no tiene archivos ni commits iniciales:
+
+1. El comando `git clone` creará una carpeta local con el nombre del repositorio
+2. Configurará automáticamente el remoto llamado "origin" que apunta a tu repositorio GitHub
+3. Aunque el repositorio esté vacío, se establecerá la conexión entre tu repositorio local y el remoto
+4. Puedes empezar a añadir archivos, hacer commits y push normalmente
+
+```bash
+# Ejemplo de flujo con un repositorio vacío
+git clone https://github.com/usuario/repo-vacio.git
+cd repo-vacio
+echo "# Mi Proyecto Nuevo" > README.md
+git add README.md
+git commit -m "Primer commit: README añadido"
+git push origin main
+```
+
+### Crear un nuevo repositorio desde cero
+Si prefieres crear un repositorio local primero y luego conectarlo a GitHub:
+
+```bash
+# Crear un directorio para tu proyecto
+mkdir mi-proyecto
+cd mi-proyecto
+
+# Inicializar un repositorio Git local
+git init
+
+# Crear algunos archivos iniciales
+echo "# Mi Proyecto" > README.md
+
+# Añadir y confirmar los archivos
+git add .
+git commit -m "Commit inicial"
+
+# Conectar a un repositorio remoto en GitHub (que debes crear primero en la web de GitHub)
+git remote add origin https://github.com/tu-usuario/mi-proyecto.git
+
+# Subir los cambios (para repos nuevos es posible que necesites especificar la rama)
+git push -u origin main
+```
 
 ### Configurar SSH para una conexión más segura (opcional pero recomendado)
 ```bash
