@@ -17,7 +17,9 @@ Competencia de React SENA para el Programa de ADSO
 5. [Componentes](https://github.com/aperezn298/ReactSENA/tree/main/05_Componentes)
 6. [Hooks](https://github.com/aperezn298/ReactSENA/tree/main/06_Hooks)
     - [Carrito de compra](https://github.com/aperezn298/ReactSENA/tree/main/06_Hooks/carritoCompra/GUIA_CARRITO_COMPRAS.md)
-7. [Estados Globales](https://github.com/aperezn298/ReactSENA/tree/main/07_EstadosGlobales)
+7. Estados Globales
+    - [Conceptos](https://github.com/aperezn298/ReactSENA/tree/main/07_EstadosGlobales/Version02/EstadosGlobales.pdf)
+    - [Inicio de Sesión](https://github.com/aperezn298/ReactSENA/tree/main/07_EstadosGlobales/Version02/PasoPasologin.md)
 8. [Navegación y Rutas](https://github.com/aperezn298/ReactSENA/tree/main/08_Navegacion)
 9. [Consumo de API](https://github.com/aperezn298/ReactSENA/tree/main/09_ConsumoAPI)
 10. [API Node JS](https://github.com/aperezn298/ReactSENA/tree/main/10_API_NodeJS)
