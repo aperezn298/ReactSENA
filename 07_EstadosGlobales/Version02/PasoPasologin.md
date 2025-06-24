@@ -1,6 +1,6 @@
 # Ejercicio de Autenticación con Redux Toolkit
 
-> **Introducción para el estudiante:** Este proyecto es un ejercicio práctico diseñado para que aprendas a implementar un sistema de autenticación completo utilizando tecnologías modernas de React. A través de este ejercicio, comprenderás cómo estructurar un proyecto React de manera profesional, organizando tu código en módulos reutilizables y aplicando patrones de diseño que facilitan el mantenimiento y la escalabilidad. El objetivo principal es que domines Redux Toolkit para la gestión de estado y que puedas integrar llamadas a APIs externas dentro de una arquitectura bien estructurada.
+> Este proyecto es un ejercicio práctico diseñado para que aprendas a implementar un sistema de autenticación completo utilizando tecnologías modernas de React. A través de este ejercicio, comprenderás cómo estructurar un proyecto React de manera profesional, organizando tu código en módulos reutilizables y aplicando patrones de diseño que facilitan el mantenimiento y la escalabilidad. El objetivo principal es que domines Redux Toolkit para la gestión de estado y que puedas integrar llamadas a APIs externas dentro de una arquitectura bien estructurada.
 
 Este proyecto demuestra cómo implementar un sistema completo de autenticación utilizando React y Redux Toolkit, siguiendo una estructura de proyecto modular y escalable.
 
