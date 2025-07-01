@@ -43,3 +43,17 @@
     padding: 20px;
     color: #132790;
 }
+
+.btn.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn.btn-primary:hover {
+    background-color: #0056b3;
+}
