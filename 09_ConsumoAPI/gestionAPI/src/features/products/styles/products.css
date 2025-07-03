@@ -1,0 +1,327 @@
+/* Estilos para Dashboard Administrativo */
+
+.App {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffffff 0%, #dddcdf 100%);
+  background-attachment: fixed;
+}
+
+/* Header del Dashboard */
+.dashboard-header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-title {
+  color: #2c3e50;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.dashboard-subtitle {
+  color: #6c757d;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* Contenido del Dashboard */
+.dashboard-content {
+  padding: 0 1.5rem 2rem;
+}
+
+/* Cards de Estadísticas */
+.stats-card {
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 12px !important;
+}
+
+.stats-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.stats-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.stats-label {
+  color: #6c757d;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stats-value {
+  color: #2c3e50;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Card de Tabla */
+.table-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+
+.table-card .card-header {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-bottom: 1px solid #e9ecef !important;
+  padding: 1rem 1.5rem;
+}
+
+/* Dashboard Table */
+.dashboard-table-container {
+  max-height: 70vh;
+  overflow-y: auto;
+  background: white;
+}
+
+.dashboard-table {
+  margin: 0;
+  background: white;
+}
+
+.dashboard-table thead th {
+  background: #343a40 !important;
+  color: white !important;
+  font-weight: 600;
+  border: none;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+}
+
+.dashboard-table tbody tr {
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.dashboard-table tbody tr:hover {
+  background-color: #f8f9fa;
+  transform: scale(1.002);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-table td {
+  padding: 1rem;
+  vertical-align: middle;
+  border: none;
+}
+
+/* Botones de Acción */
+.btn-action {
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.375rem 0.75rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.btn-action:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Botones del Dashboard */
+.btn-dashboard {
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.btn-dashboard:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Alertas del Dashboard */
+.alert-dashboard {
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Imágenes de productos en tabla */
+.object-fit-cover {
+  object-fit: cover;
+  border: 2px solid #e9ecef;
+  transition: all 0.2s ease;
+}
+
+.object-fit-cover:hover {
+  border-color: #007bff;
+  transform: scale(1.05);
+}
+
+/* Badges mejorados */
+.badge {
+  font-size: 0.75em;
+  font-weight: 600;
+  padding: 0.5em 0.75em;
+  border-radius: 6px;
+}
+
+/* Modal mejorado */
+.modal-content {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+}
+
+.modal-header {
+  border-bottom: 1px solid #e9ecef;
+  border-radius: 12px 12px 0 0;
+  background: rgba(248, 249, 250, 0.8);
+}
+
+.modal-footer {
+  border-top: 1px solid #e9ecef;
+  border-radius: 0 0 12px 12px;
+  background: rgba(248, 249, 250, 0.8);
+}
+
+/* Formulario mejorado */
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Scrollbar personalizado */
+.dashboard-table-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dashboard-table-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.dashboard-table-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.dashboard-table-container::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Estados de carga */
+.loading-state {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-header {
+    padding: 1rem 0;
+  }
+  
+  .dashboard-title {
+    font-size: 1.5rem;
+  }
+  
+  .dashboard-subtitle {
+    font-size: 1rem;
+  }
+  
+  .stats-card {
+    margin-bottom: 1rem;
+  }
+  
+  .btn-dashboard {
+    font-size: 0.875rem;
+    padding: 0.375rem 0.75rem;
+  }
+  
+  .dashboard-table-container {
+    max-height: 60vh;
+  }
+  
+  .dashboard-table th,
+  .dashboard-table td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .dashboard-content {
+    padding: 0 1rem 2rem;
+  }
+  
+  .btn-action {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .stats-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+  
+  .stats-value {
+    font-size: 1.5rem;
+  }
+}

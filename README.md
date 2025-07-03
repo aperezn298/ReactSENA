@@ -21,7 +21,10 @@ Competencia de React SENA para el Programa de ADSO
     - [Conceptos](https://github.com/aperezn298/ReactSENA/tree/main/07_EstadosGlobales/Version02/EstadosGlobales.pdf)
     - [Inicio de Sesión](https://github.com/aperezn298/ReactSENA/tree/main/07_EstadosGlobales/Version02/PasoPasologin.md)
 8. [Navegación y Rutas](https://github.com/aperezn298/ReactSENA/tree/main/08_Navegacion)
-9. [Consumo de API](https://github.com/aperezn298/ReactSENA/tree/main/09_ConsumoAPI)
+9. API y Gestión CRUD
+    - [Conceptos de API](https://github.com/aperezn298/ReactSENA/tree/main/09_ConsumoAPI/01GestionAPI.pdf)
+    - [React Bootstrap](https://github.com/aperezn298/ReactSENA/tree/main/09_ConsumoAPI/02UsoReactBootstrap.md)
+    - [Ejemplos](https://github.com/aperezn298/ReactSENA/tree/main/09_ConsumoAPI)
 10. [API Node JS](https://github.com/aperezn298/ReactSENA/tree/main/10_API_NodeJS)
 
 
